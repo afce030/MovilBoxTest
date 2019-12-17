@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/prospectsListFragment">
+
+    <fragment
+        android:id="@+id/prospectsListFragment"
+        android:name="com.movilbox.mbprobe.view.fragments.main_navigation.ProspectsListFragment"
+        android:label="fragment_prospects_list"
+        tools:layout="@layout/fragment_prospects_list" >
+        <action
+            android:id="@+id/action_prospectsListFragment_to_prospectEditionFragment"
+            app:destination="@id/prospectEditionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.movilbox.mbprobe.view.fragments.main_navigation.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/prospectEditionFragment"
+        android:name="com.movilbox.mbprobe.view.fragments.main_navigation.ProspectEditionFragment"
+        android:label="fragment_prospect_edition"
+        tools:layout="@layout/fragment_prospect_edition" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+</navigation>
